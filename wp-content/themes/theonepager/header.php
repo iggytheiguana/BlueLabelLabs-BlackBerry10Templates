@@ -28,13 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 	wp_title( '|', true, 'right' );
 
+        //commented out by bobbyg, 03/06/2013 due to conflict with Yoast SEO plugin
 	// Add the blog name.
-	bloginfo( 'name' );
+	//bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+	//$site_description = get_bloginfo( 'description', 'display' );
+	//if ( $site_description && ( is_home() || is_front_page() ) )
+//		echo " | $site_description";
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
